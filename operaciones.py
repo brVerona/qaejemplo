@@ -12,7 +12,6 @@ def dividir( a , b):
         raise ValueError('error al dividir por cero')
     return a / b
 
-
 def calculadora_simple( operacion , a, b):
     try:
         a  = int(a)

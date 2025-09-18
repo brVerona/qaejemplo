@@ -1,0 +1,10 @@
+# Ignorar carpetas de caché de Python
+__pycache__/
+*.pyc
+
+# Ignorar caché de pytest
+.pytest_cache/
+
+# Ignorar configuración de entorno virtual
+venv/
+.venv/
