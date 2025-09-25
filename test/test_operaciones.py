@@ -31,3 +31,23 @@ def test_sumar_con_fixture(numeros):
     a,b= numeros
     assert operaciones.sumar(a,b) == 10
 
+@pytest.mark.lento
+def test_sumar_lento():
+    assert operaciones.sumar(1,2) == 3
+
+def test_float():
+    resultado = 0.1 + 0.2
+    assert resultado == pytest.approx(0.3) # tolerancia automática
+
+def test_estructura():
+    data = {"nombre":"Ana" , "edad": 23}
+
+    assert "nombre" in data
+    
+    assert "edad" in data
+    assert isinstance(data["nombre"], str)
+    assert isinstance(data["edad"], int)
+
+def test_lista():
+    lista = [{"id":1},{"id":2}]
+    assert all("id" in item for item in lista)
